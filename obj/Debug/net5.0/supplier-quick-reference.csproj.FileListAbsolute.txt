@@ -1,0 +1,15 @@
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/bin/Debug/net5.0/supplier-quick-reference.deps.json
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/bin/Debug/net5.0/supplier-quick-reference.runtimeconfig.json
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/bin/Debug/net5.0/supplier-quick-reference.runtimeconfig.dev.json
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/bin/Debug/net5.0/supplier-quick-reference.dll
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/bin/Debug/net5.0/ref/supplier-quick-reference.dll
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/bin/Debug/net5.0/supplier-quick-reference.pdb
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.csproj.AssemblyReference.cache
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.AssemblyInfoInputs.cache
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.AssemblyInfo.cs
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.csproj.CoreCompileInputs.cache
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.dll
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/ref/supplier-quick-reference.dll
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.pdb
+/Users/shingsaylee/Documents/code_louisville/C#_Project/supplier-quick-reference/obj/Debug/net5.0/supplier-quick-reference.genruntimeconfig.cache
