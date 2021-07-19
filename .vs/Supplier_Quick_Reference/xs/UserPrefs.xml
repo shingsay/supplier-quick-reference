@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{2C58CDE2-1535-4DA1-BC5E-2FF926C7EFCA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Desktop/CL-Knitting-Helper-master/classes/Inventory.cs">
+    <Files>
+      <File FileName="../../../../Desktop/CL-Knitting-Helper-master/Program.cs" Line="9" Column="27" />
+      <File FileName="../../../../Desktop/CL-Knitting-Helper-master/classes/Inventory.cs" Line="87" Column="17" />
+      <File FileName="../../../../Desktop/CL-Knitting-Helper-master/classes/needles.cs" Line="1" Column="1" />
+      <File FileName="../../../../Desktop/CL-Knitting-Helper-master/classes/CalcGauge.cs" Line="1" Column="1" />
+      <File FileName="../../../../Desktop/CL-Knitting-Helper-master/classes/yarn.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Supplier__Quick__Reference PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
