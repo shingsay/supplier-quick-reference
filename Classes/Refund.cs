@@ -66,6 +66,36 @@ public class Refund
 
 
         }
+        static void RefPolicyReturn()
+        {
+            
+            bool showMenu = true;
+            while (showMenu)
+
+            {
+
+                showMenu = ReturnPolicy();
+
+            }
+            static bool ReturnPolicy()
+            {
+                string menuInput;
+                menuInput = Console.ReadLine();
+                switch (menuInput)
+                {
+                    //INPUTS TO RETURN TO BRANDS MENU FROM RETURN POLICY
+                    case "0":
+                        Console.Clear();
+                        BrandsMenu();
+                        return false;
+
+                    default:
+                        Console.WriteLine("Please enter 0 to go back");
+                        return true;
+
+                }
+            }
+        }
         
     }
 

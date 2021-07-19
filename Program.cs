@@ -5,15 +5,14 @@ namespace supplier_quick_reference
 {
     public class Program
     {
-        // static Contacts Cont = new Contacts();
-        // static Refund Ref = new Refund();
+        
         static MainMenu MainMenu = new MainMenu();
         static void Main(string[] args)
         {
             try 
             {                
                 //check log files 
-                string path1 = @"data\log.txt";
+                string path1 = @"data\errorlog.txt";
                 if (!File.Exists(path1))
                 {
                     using (var log = new StreamWriter(path1, true))

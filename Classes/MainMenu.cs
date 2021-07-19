@@ -48,7 +48,7 @@ public class MainMenu
 
                 default:
                     Console.Clear();
-                    Console.WriteLine("Please enter a valid character of 1, 2, or 0");
+                    Console.WriteLine("Please enter a valid character of 1, 2, or 0\n\nPress any character to return to previous menu.");
                     Console.ReadKey();
                     return true;
             }
