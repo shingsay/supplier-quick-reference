@@ -1,7 +1,11 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 public class Refund
 {
+    private static string logLocation = "data\\invalidentrylog.txt";
+
+    //REFUND POLICY DICTIONARY
     static Dictionary<string, string> Brands = new Dictionary<string, string>()
     {
         {"1", "Armor Refund Policy\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nTo go back press 0"},
@@ -19,7 +23,7 @@ public class Refund
         }
 
         //BRAND MENU
-        static bool BrandsMenu() //CAN I CALL THIS FROM CONTACTS.CS OR DO I HAVE TO RE-WRITE IT HERE? 
+        static bool BrandsMenu() 
         {
             Console.WriteLine(@"
                ******************************       
@@ -57,7 +61,11 @@ public class Refund
                     return false;
 
                 default:
-                    Console.WriteLine("Please enter a value from 0 - 3");
+                    File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
+                    Console.Clear();
+                    Console.WriteLine("Invalid character entered. Please enter a value from 0 - 3\n\nPress any key to go back to the previous screen."); //IF INVALID CHARCTER USED THEN APP QUITS AFTER DISPLAYING THIS - HOW TO KEEP APP OPEN //OTHERWISE IF THEY FOLLOW THE DIRECTIONS THE APP WORKS
+                    Console.ReadKey();
+                    Console.Clear();
                     return true;
 
             }
@@ -86,11 +94,14 @@ public class Refund
                     //INPUTS TO RETURN TO BRANDS MENU FROM RETURN POLICY
                     case "0":
                         Console.Clear();
-                        BrandsMenu();
+                        Refund Ref = new Refund();
+                        Ref.Display();
                         return false;
 
                     default:
-                        Console.WriteLine("Please enter 0 to go back");
+                        File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
+                        Console.Clear();
+                        Console.WriteLine("Invalid character entered.\n\nPlease enter 0 to go back");
                         return true;
 
                 }

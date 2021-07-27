@@ -1,8 +1,10 @@
 using System;
+using System.IO;
 
 public class Contacts 
 {
-    public void Display() //CAN I JUST CALL Brands();??
+    private static string logLocation = "data\\invalidentrylog.txt";
+    public void Display()
     {
         //Loop the Brand Menu
         bool showBrands = true;
@@ -36,17 +38,17 @@ public class Contacts
                 Console.Clear();
                 ArmorRep();
                 return false;
-                 //DISPLAY SALES REP FROM ARMOR
+                 
 
                 case "2": 
                 Console.Clear();
                 Tree360Rep();
-                return false;//DISPLAY SALES REP FROM TREE 360
+                return false;
 
                 case "3": 
                 Console.Clear();
                 AeroRep();
-                return false;//DISPLAY SALES REP FROM AERO
+                return false;
 
                 case "0":
                 Console.Clear();
@@ -54,7 +56,11 @@ public class Contacts
                 return false;
                 
                 default:
-                    Console.WriteLine("Please enter a value from 0 - 3");
+                    File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
+                    Console.Clear();
+                    Console.WriteLine("Invalid character entered. Please enter a value between 0 - 3\n\nPress any key to go back");
+                    Console.ReadKey();
+                    Console.Clear();
                     return true;
 
             }
@@ -71,7 +77,7 @@ public class Contacts
                 showMenu = ArmorRep();
             }
 
-            //Contacts Menu - HAVE THE CONTACT FOR SELECTED SUPPLIER DISPLAY ON APP
+            
             static bool ArmorRep()
             {
                 Console.WriteLine(@"
@@ -94,14 +100,19 @@ public class Contacts
             menuInput = Console.ReadLine();
             switch (menuInput)
             {
-                //INPUTS FOR BRANDS MENU TO DISPLAY SALES REP FOR PARTICULAR BRAND
+                //INPUT TO RETURN TO BRANDS MENU
                 case "0": 
                 Console.Clear();
-                BrandsMenu();
+                Contacts Cont = new Contacts();
+                Cont.Display();
                 return false;
                 
                 default:
-                    Console.WriteLine("Please enter 0 to go back");
+                    File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
+                    Console.Clear();
+                    Console.WriteLine("Invalid character entered. Please enter any key to go back to the previous screen.");
+                    Console.ReadKey();
+                    Console.Clear();
                     return true;
 
             }
@@ -118,7 +129,7 @@ public class Contacts
                 showMenu = Tree360Rep();
             }
 
-            //Contacts Menu - HAVE THE CONTACT FOR SELECTED SUPPLIER DISPLAY ON APP
+            
             static bool Tree360Rep()
             {
                 Console.WriteLine(@"
@@ -141,14 +152,19 @@ public class Contacts
             menuInput = Console.ReadLine();
             switch (menuInput)
             {
-                //INPUTS FOR BRANDS MENU TO DISPLAY SALES REP FOR PARTICULAR BRAND
+                //INPUT TO RETURN TO BRANDS MENU
                 case "0": 
                 Console.Clear();
-                BrandsMenu();
+                Contacts Cont = new Contacts();
+                Cont.Display();
                 return false;
                 
                 default:
-                    Console.WriteLine("Please enter 0 to go back");
+                    File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
+                    Console.Clear();
+                    Console.WriteLine("Invalid character entered. Please enter any key to go back to the previous screen.");
+                    Console.ReadKey();
+                    Console.Clear();
                     return true;
 
             }
@@ -165,7 +181,7 @@ public class Contacts
                 showMenu = AeroRep();
             }
 
-            //Contacts Menu - HAVE THE CONTACT FOR SELECTED SUPPLIER DISPLAY ON APP
+            
             static bool AeroRep()
             {
                 Console.WriteLine(@"
@@ -188,14 +204,19 @@ public class Contacts
             menuInput = Console.ReadLine();
             switch (menuInput)
             {
-                //INPUTS FOR BRANDS MENU TO DISPLAY SALES REP FOR PARTICULAR BRAND
+                //INPUTS TO RETURN TO BRANDS MENU
                 case "0": 
                 Console.Clear();
-                BrandsMenu();
+                Contacts Cont = new Contacts();
+                Cont.Display();
                 return false;
                 
                 default:
-                    Console.WriteLine("Please enter 0 to go back");
+                    File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
+                    Console.Clear();
+                    Console.WriteLine("Invalid character entered. Please enter any key to go back to the previous screen.");
+                    Console.ReadKey();
+                    Console.Clear();
                     return true;
 
             }

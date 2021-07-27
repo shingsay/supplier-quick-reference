@@ -5,16 +5,42 @@ public class MainMenu
     static Contacts Cont = new Contacts();
     static Refund Ref = new Refund();
   
-    
+    private static string logLocation = "data\\invalidentrylog.txt";
         
         //Main Menu
-        public static bool DisplayMenu()
-        {            
+        public static void DisplayMenu()
+        {   
 
+            //Display days left until event
+            DateTime dt = DateTime.Now;
+            string x = DateTime.Now.ToShortDateString();
+            Console.WriteLine("Today's Date: " + x.ToString());
+
+            DateTime dt30 = (DateTime.Now).AddDays(30);
+            TimeSpan timeLeft = dt30 - DateTime.Now; 
+            Console.WriteLine($"*** ATTENTION {timeLeft.Days} days left until new product launch from brand ARMOR ***");
             
+            //Intro
+
+            Console.WriteLine(@"
+               - - - - - - - - - - - - - -
+               | Supplier Quick Reference |
+               - - - - - - - - - - - - - -
+             ");
+
+            //Main Menu Loop
+            
+            bool showMenu = true;
+             while (showMenu)
+            {
+            showMenu = MainMenu();
+            }
+
+            static bool MainMenu()
+            {
 
             //Menu Prompt
-            Console.Clear();
+            
             Console.WriteLine(@"
                ******************************       
 
@@ -47,11 +73,13 @@ public class MainMenu
                     return false;
 
                 default:
+                    File.AppendAllText(logLocation, Environment.NewLine + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + ": INVALID INPUT: " + menuInput);
                     Console.Clear();
-                    Console.WriteLine("Please enter a valid character of 1, 2, or 0\n\nPress any character to return to previous menu.");
+                    Console.WriteLine("Invalid character entered. Please enter a character between 0 - 2\n\nPress any character to return to the previous menu.");
                     Console.ReadKey();
+                    Console.Clear();
                     return true;
             }
-
+            }
     }
 }
