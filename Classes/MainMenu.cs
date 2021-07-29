@@ -19,6 +19,8 @@ public class MainMenu
             DateTime dt30 = (DateTime.Now).AddDays(30);
             TimeSpan timeLeft = dt30 - DateTime.Now; 
             Console.WriteLine($"*** ATTENTION {timeLeft.Days} days left until new product launch from brand ARMOR ***");
+
+           
             
             //Intro
 
