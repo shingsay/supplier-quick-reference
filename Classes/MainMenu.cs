@@ -10,11 +10,10 @@ public class MainMenu
         //Main Menu
         public static void DisplayMenu()
         {   
-
+            
             //Display days left until event
-            DateTime dt = DateTime.Now;
             string x = DateTime.Now.ToShortDateString();
-            Console.WriteLine("Today's Date: " + x.ToString());
+            Console.WriteLine("Today's Date: " + x);
 
             DateTime dt30 = (DateTime.Now).AddDays(30);
             TimeSpan timeLeft = dt30 - DateTime.Now; 
